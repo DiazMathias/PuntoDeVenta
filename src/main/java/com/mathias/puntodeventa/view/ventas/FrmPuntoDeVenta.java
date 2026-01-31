@@ -146,10 +146,20 @@ public class FrmPuntoDeVenta extends JFrame {
     }
 
     private void añadirPanelCentral(JPanel panel) {
+        JPanel panelCentral = crearPanelCentral();
+        panel.add(panelCentral, BorderLayout.CENTER);
+
+        añadirComponentesPanelCentral(panelCentral);
+    }
+
+    private static JPanel crearPanelCentral() {
         JPanel panelCentral = new JPanel(new BorderLayout());
         panelCentral.setBackground(Color.WHITE);
         panelCentral.setBorder(new EmptyBorder(25, 25, 25, 25));
+        return panelCentral;
+    }
 
+    private void añadirComponentesPanelCentral(JPanel panelCentral) {
         tablaVenta = new JTable(new DefaultTableModel(columnas_tabla, 0));
         tablaVenta.setRowHeight(45);
         tablaVenta.setFont(new Font("Segoe UI", Font.PLAIN, 16));
@@ -158,8 +168,6 @@ public class FrmPuntoDeVenta extends JFrame {
 
         JScrollPane scroll = new JScrollPane(tablaVenta);
         panelCentral.add(scroll, BorderLayout.CENTER);
-
-        panel.add(panelCentral, BorderLayout.CENTER);
     }
 
     // métodos auxiliares
@@ -168,6 +176,7 @@ public class FrmPuntoDeVenta extends JFrame {
         JLabel lbl = new JLabel(texto);
         lbl.setForeground(Color.WHITE);
         lbl.setFont(new Font("Segoe UI", style, size));
+        lbl.setAlignmentX(Component.LEFT_ALIGNMENT);
         return lbl;
     }
 
