@@ -1,4 +1,4 @@
-package com.mathias.puntodeventa.view.ventas;
+package com.mathias.puntodeventa.view.puntodeventa;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
