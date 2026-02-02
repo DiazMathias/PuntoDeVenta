@@ -21,11 +21,11 @@ public class DlgCobrar extends JDialog {
     }
 
     private void inicializarVentana() {
-        setTitle("Cobrar");
-        setSize(370, 400);
-        setLocationRelativeTo(null);
-        setDefaultCloseOperation(DISPOSE_ON_CLOSE);
-        setResizable(false);
+        this.setTitle("Cobrar");
+        this.setSize(370, 400);
+        this.setLocationRelativeTo(null);
+        this.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+        this.setResizable(false);
     }
 
     private JPanel crearPanelPrincipal() {
@@ -179,14 +179,6 @@ public class DlgCobrar extends JDialog {
 
     public void mostrar() {
         this.setVisible(true);
-    }
-
-    // main para probar la interfaz
-
-    public static void main(String[] args) {
-        JFrame frame = new JFrame();
-        DlgCobrar c = new DlgCobrar(frame);
-        c.setVisible(true);
     }
 
 }

@@ -97,10 +97,4 @@ public class FrmMenu extends JFrame {
         this.setVisible(true);
     }
 
-    // main para probar la interfaz
-
-    public static void main(String[] args) {
-        new FrmMenu().setVisible(true);
-    }
-
 }

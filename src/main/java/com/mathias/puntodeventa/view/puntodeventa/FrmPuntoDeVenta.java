@@ -215,11 +215,4 @@ public class FrmPuntoDeVenta extends JFrame {
         this.setVisible(true);
     }
 
-    // main para probar la interfaz
-
-    public static void main(String[] args) {
-        FrmPuntoDeVenta p = new FrmPuntoDeVenta();
-        p.mostrar();
-    }
-
 }
