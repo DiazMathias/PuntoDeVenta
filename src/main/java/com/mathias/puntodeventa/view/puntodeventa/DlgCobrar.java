@@ -172,6 +172,12 @@ public class DlgCobrar extends JDialog {
         btn.setCursor(new Cursor(Cursor.HAND_CURSOR));
     }
 
+    // métodos del controlador
+
+    public void mostrar() {
+        this.setVisible(true);
+    }
+
     // main para probar la interfaz
 
     public static void main(String[] args) {
