@@ -9,7 +9,7 @@ public class FrmPuntoDeVenta extends JFrame {
 
     private JTable tablaVenta;
     private JTextField txtCodigo, txtDescripcion, txtPrecio;
-    private JButton btnVender, btnVaciarCarrito, btnAñadirManual;
+    private JButton btnCobrar, btnVaciarCarrito, btnAñadirManual;
     private JLabel lblTotalVender, lblProductos;
 
     private String[] columnas_tabla = {"Descripción", "Precio Unitario", "Cantidad", "Total"};
@@ -24,11 +24,11 @@ public class FrmPuntoDeVenta extends JFrame {
     }
 
     private void inicializarVentana() {
-        setTitle("Punto de Venta");
-        setSize(800, 600);
-        setExtendedState(JFrame.MAXIMIZED_BOTH);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setLocationRelativeTo(null);
+        this.setTitle("Punto de Venta");
+        this.setSize(800, 600);
+        this.setExtendedState(JFrame.MAXIMIZED_BOTH);
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setLocationRelativeTo(null);
     }
 
     private JPanel crearPanelPrincipal() {
@@ -137,12 +137,12 @@ public class FrmPuntoDeVenta extends JFrame {
         panel.add(lblTotalVender);
         panel.add(Box.createVerticalStrut(20));
 
-        btnVender = new JButton("COBRAR");
-        configurarBoton(btnVender);
-        btnVender.setBackground(new Color(46, 204, 113));
-        btnVender.setForeground(Color.WHITE);
-        btnVender.setFont(new Font("Segoe UI", Font.BOLD, 22));
-        panel.add(btnVender);
+        btnCobrar = new JButton("COBRAR");
+        configurarBoton(btnCobrar);
+        btnCobrar.setBackground(new Color(46, 204, 113));
+        btnCobrar.setForeground(Color.WHITE);
+        btnCobrar.setFont(new Font("Segoe UI", Font.BOLD, 22));
+        panel.add(btnCobrar);
     }
 
     private void añadirPanelCentral(JPanel panel) {
@@ -196,6 +196,7 @@ public class FrmPuntoDeVenta extends JFrame {
     }
 
     private void configurarBoton(JButton btn) {
+        btn.setMinimumSize(new Dimension(Integer.MAX_VALUE, 35));
         btn.setPreferredSize(new Dimension(Integer.MAX_VALUE, 35));
         btn.setMaximumSize(new Dimension(Integer.MAX_VALUE, 35));
         btn.setFocusPainted(false);
@@ -204,11 +205,21 @@ public class FrmPuntoDeVenta extends JFrame {
         btn.setAlignmentX(Component.LEFT_ALIGNMENT);
     }
 
+    // métodos del controlador
+
+    public JButton getBtnCobrar() {
+        return this.btnCobrar;
+    }
+
+    public void mostrar() {
+        this.setVisible(true);
+    }
+
     // main para probar la interfaz
 
     public static void main(String[] args) {
         FrmPuntoDeVenta p = new FrmPuntoDeVenta();
-        p.setVisible(true);
+        p.mostrar();
     }
 
 }
