@@ -167,6 +167,9 @@ public class DlgCobrar extends JDialog {
     // métodos auxiliares
 
     private void configurarBoton(JButton btn) {
+        btn.setMinimumSize(new Dimension(130, 35));
+        btn.setPreferredSize(new Dimension(130, 35));
+        btn.setMaximumSize(new Dimension(130, 35));
         btn.setFocusPainted(false);
         btn.setBorderPainted(false);
         btn.setCursor(new Cursor(Cursor.HAND_CURSOR));
