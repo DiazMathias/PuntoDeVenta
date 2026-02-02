@@ -30,10 +30,4 @@ public class MenuController {
         this.vista.mostrar();
     }
 
-    public static void main(String[] args) {
-        FrmMenu vista = new FrmMenu();
-        MenuController controlador = new MenuController(vista);
-        controlador.mostrar();
-    }
-
 }
